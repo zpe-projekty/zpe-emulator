@@ -1,0 +1,12 @@
+{
+    "name": "zpe-emulator",
+    "version": "1.0.10",
+    "description": "ZPE Developer Kit - Emulator",
+    "scripts": {
+        "build": "webpack --config webpack.config.js --env production",
+        "dev": "webpack serve --config webpack.config.js --env development",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC"
+}
