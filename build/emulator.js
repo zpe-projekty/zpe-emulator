@@ -23,14 +23,26 @@
 /************************************************************************/
 var __webpack_exports__ = {};
 /* unused harmony export define */
-// const entry = {
-//     init: (container: HTMLElement, api: any, options: any) => Promise.resolve(),
-//     getState: () => ({}),
-//     setState: (state: any) => { }
-// }
+document.body.onchange = () => {
+    console.log("Body changed");
+};
+const zpeHeader = document.getElementById("zpe-emulator-header");
+const zpeSidebar = document.getElementById("zpe-emulator-sidebar");
+const zpeTitle = document.getElementById("zpe-emulator-title");
+const zpeText = document.getElementById("zpe-emulator-text");
+function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    const results = regex.exec(window.location.search);
+    return results === null ? null : decodeURIComponent(results[1].replace(/\+/g, ' '));
+}
+function isTrueParam(param) {
+    const value = getUrlParameter(param)?.toLowerCase();
+    return value !== undefined && ["1", "yes", "true"].includes(value);
+}
 function define(fn) {
     const entry = fn().default();
-    const container = document.getElementById("emulator-container");
+    const container = document.getElementById("zpe-emulator-container");
     const api = {
         enginePath: (path) => path,
         triggerStateSave: async () => {
@@ -78,6 +90,12 @@ function define(fn) {
             });
         });
     });
+}
+if (isTrueParam("compact")) {
+    zpeHeader.style.display = "none";
+    zpeSidebar.style.display = "none";
+    zpeTitle.style.display = "none";
+    zpeText.style.display = "none";
 }
 
 

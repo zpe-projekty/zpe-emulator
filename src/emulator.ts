@@ -1,15 +1,30 @@
 
 
-// const entry = {
-//     init: (container: HTMLElement, api: any, options: any) => Promise.resolve(),
-//     getState: () => ({}),
-//     setState: (state: any) => { }
-// }
+document.body.onchange = () => {
+    console.log("Body changed");
+}
+
+const zpeHeader = document.getElementById("zpe-emulator-header") as HTMLElement;
+const zpeSidebar = document.getElementById("zpe-emulator-sidebar") as HTMLElement;
+const zpeTitle = document.getElementById("zpe-emulator-title") as HTMLElement;
+const zpeText = document.getElementById("zpe-emulator-text") as HTMLElement;
+
+function getUrlParameter(name: string): string | null {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    const results = regex.exec(window.location.search);
+    return results === null ? null : decodeURIComponent(results[1].replace(/\+/g, ' '));
+}
+
+function isTrueParam(param: string): boolean {
+    const value = getUrlParameter(param)?.toLowerCase();
+    return value !== undefined && ["1", "yes", "true"].includes(value);
+}
 
 export function define(fn: () => any) {
 
     const entry = fn().default();
-    const container = document.getElementById("emulator-container") as HTMLElement;
+    const container = document.getElementById("zpe-emulator-container") as HTMLElement;
     const api = {
         enginePath: (path: string) => path,
 
@@ -62,4 +77,11 @@ export function define(fn: () => any) {
             });
         });
     });
+}
+
+if (isTrueParam("compact")) {
+    zpeHeader.style.display = "none";
+    zpeSidebar.style.display = "none";
+    zpeTitle.style.display = "none";
+    zpeText.style.display = "none";
 }
