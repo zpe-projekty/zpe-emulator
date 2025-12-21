@@ -4,7 +4,9 @@ Emulator umożliwia uruchamianie aplikacji ZPE w przeglądarce internetowej w ce
 
 Jest to składnik pakietu ZPE Developer Toolkit i może być używany do tworzenia, debugowania i testowania aplikacji ZPE bez potrzeby dostępu do platformy ZPE.
 
-Więcej inforamcji na temat kożystania z emulatora znajdziesz w pakiecie ZPE Developer Toolkit - [ZPE Port](https://github.com/zpe-projekty/zpe-port/README.md).
+Więcej informacji na temat korzystania z emulatora znajdziesz w pakiecie ZPE Developer Toolkit - [ZPE Port](https://github.com/zpe-projekty/zpe-port/README.md).
+
+Paskowane tło w emulatorze pomaga wizualnie odróżnić obszar platformy od aplikacji. Przypomina też żeby nie polegać na kolorze tła platformy podczas projektowania aplikacji.
 
 # Parametry uruchomieniowe
 
