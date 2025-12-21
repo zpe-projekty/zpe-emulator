@@ -1,6 +1,6 @@
 {
     "name": "zpe-emulator",
-    "version": "1.0.10",
+    "version": "1.1.0",
     "description": "ZPE Developer Kit - Emulator",
     "scripts": {
         "build": "webpack --config webpack.config.js --env production",
