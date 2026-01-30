@@ -1,4 +1,7 @@
-# ZPE Developer Toolkit - ZPE Emulator
+# DEPRECATED - zmień na ZPE-Port 2.0 
+Więcej informacji znajdziesz [tutaj](https://github.com/zpe-projekty/zpe-port/wiki/Migracja-1.0-na-2.0)
+
+### ZPE Developer Toolkit - ZPE Emulator
 
 Emulator umożliwia uruchamianie aplikacji ZPE w przeglądarce internetowej w celach deweloperskich i testowych.
 
@@ -8,7 +11,7 @@ Więcej informacji na temat korzystania z emulatora znajdziesz w pakiecie ZPE De
 
 Paskowane tło w emulatorze pomaga wizualnie odróżnić obszar platformy od aplikacji. Przypomina też żeby nie polegać na kolorze tła platformy podczas projektowania aplikacji.
 
-# Parametry uruchomieniowe
+### Parametry uruchomieniowe
 
 Emulator obsługuje następujące parametry URL:
 
